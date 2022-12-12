@@ -1,12 +1,7 @@
 # include "app.h"
 
 int main(){
-	printHello();	
+	printHello();
 
-	return EXIT_SUCCESS;
-}
-
-int printHello(){
-	printf("Hello World !\n");
 	return EXIT_SUCCESS;
 }
