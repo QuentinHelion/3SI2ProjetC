@@ -6,18 +6,29 @@
 
 # include <stdlib.h>
 # include <stdio.h>
-
+# include <mysql/mysql.h>
+# include <string.h>
 
 
 // === Variables ===
 
-# define EXEMPLE 10
+# define SERVER   "localhost"
+# define USER     "root"
+# define PASSWORD "root"
+# define DB       "2SI2ProjetC"
 
+
+// === Structures ===
+
+typedef struct IPaddr{
+	int addr[4];
+	int mask;
+} ip_addr;
 
 
 // === Prototypes ===
 
-int	printHello();
+int insertIP(ip_addr ip, MYSQL *conn);
 
 
 

@@ -6,7 +6,7 @@ LDFLAGS =
 INCLUDES = includes
 
 SRCS = 	srcs/main.c				\
-				srcs/printHello.c		\
+	srcs/mysql/insert.c		\
 
 OBJS = $(SRCS:.c=.o)
 
@@ -15,12 +15,12 @@ all: $(NAME)
 
 
 $(NAME): $(OBJS)
-	$(CC) -o $@ $^ $(LDFLAGS)
+	$(CC) -o $@ $^ $(LDFLAGS) -lmysqlclient
 
 $(OBJS): $(INCLUDES)/app.h
 
 %.o: %.c
-	$(CC) -o $@ -c $< -I $(INCLUDES) $(CFLAGS)
+	$(CC) -o $@ -c $< -I $(INCLUDES) $(CFLAGS) -lmysqlclient
 
 clean:
 	rm -f $(OBJS)
