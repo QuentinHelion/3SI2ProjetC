@@ -2,7 +2,7 @@
 
 // SELECT CONCAT(bit1,'.',bit2,'.',bit3,'.',bit4), maskFROM IPS;
 
-int selectWhere(char *column, char *value, MYSQL *conn){
+int selectIP(char *column, char *value, MYSQL *conn){
 
   MYSQL_RES *res;
   MYSQL_ROW row;

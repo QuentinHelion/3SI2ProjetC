@@ -28,10 +28,12 @@ int main(){
 
 	insertIP(ipTest,conn);
 
-	char *column = "mask";
-	char *value = "24";
+	char *column = "1";
+	char *value = "1";
 
-	selectWhere(column, value, conn);
+	selectIP(column, value, conn);
+
+	//deleteIP("10", conn);
 
   mysql_close(conn);
 	return EXIT_SUCCESS;
