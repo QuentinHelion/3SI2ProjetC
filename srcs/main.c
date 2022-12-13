@@ -5,8 +5,6 @@ int main(){
 	// ======= PARTIE SQL =======
 
 	MYSQL *conn;
-	// MYSQL_RES *res;
-	// MYSQL_ROW row;
 
 	conn = mysql_init(NULL);
 
@@ -30,7 +28,11 @@ int main(){
 
 	insertIP(ipTest,conn);
 
-	//mysql_free_result(res);
+	char *column = "mask";
+	char *value = "24";
+
+	selectWhere(column, value, conn);
+
   mysql_close(conn);
 	return EXIT_SUCCESS;
 }

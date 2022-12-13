@@ -7,6 +7,7 @@ INCLUDES = includes
 
 SRCS = 	srcs/main.c				\
 	srcs/mysql/insert.c		\
+	srcs/mysql/select.c		\
 
 OBJS = $(SRCS:.c=.o)
 

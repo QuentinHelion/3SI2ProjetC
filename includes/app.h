@@ -29,7 +29,7 @@ typedef struct IPaddr{
 // === Prototypes ===
 
 int insertIP(ip_addr ip, MYSQL *conn);
-
+int selectWhere(char *column, char *value, MYSQL *conn);
 
 
 #endif
