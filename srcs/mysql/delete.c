@@ -10,6 +10,6 @@ int deleteIP(char *id, MYSQL *conn){
 		return EXIT_FAILURE;
 	}
 
-	printf("Succefuly delete\n");
+	printf("Successfully delete\n");
 	return EXIT_SUCCESS;
 }

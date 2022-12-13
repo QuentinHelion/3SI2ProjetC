@@ -39,6 +39,6 @@ int insertIP(ip_addr ip, MYSQL *conn){
 	res = mysql_use_result(conn);
 	mysql_free_result(res);
 
-	printf("Succefuly insert\n");
+	printf("Successfully insert\n");
 	return EXIT_SUCCESS;
 }
