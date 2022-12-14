@@ -18,24 +18,25 @@ int main(){
 	}
 
 
-	ip_addr ipTest;
+	// ip_addr ipTest;
+	//
+	// ipTest.addr[0] = 172;
+	// ipTest.addr[1] = 16;
+	// ipTest.addr[2] = 14;
+	// ipTest.addr[3] = 69;
+	// ipTest.mask = 22;
+	//
+	// insertIP(ipTest,conn);
 
-	ipTest.addr[0] = 192;
-	ipTest.addr[1] = 168;
-	ipTest.addr[2] = 0;
-	ipTest.addr[3] = 1;
-	ipTest.mask = 24;
+	// char *column = "1";
+	char *value = "22";
 
-	insertIP(ipTest,conn);
+	//selectIP(column, value, conn);
 
-	char *column = "1";
-	char *value = "1";
+	//deleteIP("3", conn);
 
-	selectIP(column, value, conn);
+	filterMask(value,conn);
 
-	//deleteIP("10", conn);
-
-	filterMask();
   mysql_close(conn);
 	return EXIT_SUCCESS;
 }

@@ -9,6 +9,7 @@ SRCS = 	srcs/main.c				\
 	srcs/mysql/insert.c		\
 	srcs/mysql/select.c		\
 	srcs/mysql/delete.c		\
+	srcs/filter.c		\
 
 OBJS = $(SRCS:.c=.o)
 
