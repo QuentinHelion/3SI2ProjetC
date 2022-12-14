@@ -35,6 +35,7 @@ int main(){
 
 	//deleteIP("10", conn);
 
+	filterMask();
   mysql_close(conn);
 	return EXIT_SUCCESS;
 }
