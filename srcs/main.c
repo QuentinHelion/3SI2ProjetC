@@ -18,14 +18,14 @@ int main(){
 	}
 
 
-	// ip_addr ipTest;
-	//
-	// ipTest.addr[0] = 172;
-	// ipTest.addr[1] = 16;
-	// ipTest.addr[2] = 14;
-	// ipTest.addr[3] = 69;
-	// ipTest.mask = 22;
-	//
+	ip_addr ipTest;
+
+	ipTest.addr[0] = 172;
+	ipTest.addr[1] = 16;
+	ipTest.addr[2] = 14;
+	ipTest.addr[3] = 69;
+	ipTest.mask = 22;
+
 	// insertIP(ipTest,conn);
 
 	// char *column = "1";
@@ -36,6 +36,8 @@ int main(){
 	//deleteIP("3", conn);
 
 	filterMask(value,conn);
+	hexaIP(ipTest);
+
 
   mysql_close(conn);
 	return EXIT_SUCCESS;
