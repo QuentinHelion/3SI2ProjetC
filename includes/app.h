@@ -8,7 +8,6 @@
 # include <stdio.h>
 
 
-
 // === Variables ===
 
 # define EXEMPLE 10
@@ -18,6 +17,7 @@
 // === Prototypes ===
 
 int	printHello();
+int mainMenu();
 
 
 

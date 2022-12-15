@@ -5,8 +5,9 @@ LDFLAGS =
 
 INCLUDES = includes
 
-SRCS = 	srcs/main.c				\
-				srcs/printHello.c		\
+SRCS = 	srcs/main.c						\
+				srcs/printHello.c			\
+				srcs/menus/mainMenu.c	\
 
 OBJS = $(SRCS:.c=.o)
 
