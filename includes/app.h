@@ -32,5 +32,6 @@ int insertIP(ip_addr ip, MYSQL *conn);
 int selectIP(char *column, char *value, MYSQL *conn);
 int deleteIP(char *id, MYSQL *conn);
 int filterMask(char *value, MYSQL *conn);
+void binaryIP(ip_addr ip);
 
 #endif
