@@ -1,23 +1,33 @@
 # include "app.h"
 
 int main(){
-	int result = mainMenu();
-	printf("%d\n", result);
 
-	// ======= PARTIE SQL =======
-
+	// ======= VARIABLES ==========
+	int app;
 	MYSQL *conn;
 
+	// ======= SQL CONNECTION =======
 	conn = mysql_init(NULL);
-
-	printf("starting...\n");
-
+	//printf("starting...\n");
 	if (!mysql_real_connect(conn, SERVER, USER, PASSWORD, DB, 0, NULL, 0)) {
 		printf("error: %s\n", mysql_error(conn));
 		return EXIT_FAILURE;
 	} else {
-		printf("Connection success\n");
+		// printf("Connection success\n");
 	}
+
+ // ======= APP PART =======
+	do {
+		app = mainMenu();
+		switch (app) {
+			case 1: selectIP("1", "1", conn); break;
+			case 2: insertIpMenu(); break;
+		}
+		//app = app == 0 ? 0 : -1;
+	} while(app);
+
+
+
 
 
 	// ip_addr ipTest;
@@ -42,7 +52,7 @@ int main(){
 	//ipType(ipTest);
 	//binaryIP(ipTest);
 
-	
+
   mysql_close(conn);
 	return EXIT_SUCCESS;
 }

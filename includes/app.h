@@ -12,10 +12,12 @@
 
 // === Variables ===
 
-# define SERVER   "localhost"
-# define USER     "root"
-# define PASSWORD "root"
-# define DB       "2SI2ProjetC"
+# define SERVER   			"localhost"
+# define USER     			"root"
+# define PASSWORD 			"root"
+# define DB       			"2SI2ProjetC"
+# define MAX_MASK_VALUE 32
+# define MIN_MASK_VALUE 1
 
 
 // === Structures ===
@@ -28,7 +30,6 @@ typedef struct IPaddr{
 
 // === Prototypes ===
 
-int	printHello();
 int mainMenu();
 int insertIP(ip_addr ip, MYSQL *conn);
 int selectIP(char *column, char *value, MYSQL *conn);
@@ -37,6 +38,9 @@ int filterMask(char *value, MYSQL *conn);
 void binaryIP(ip_addr ip);
 void hexaIP(ip_addr ip);
 int ipType(ip_addr ip);
-
+int checkIpValid(char *ip);
+int insertIpMenu();
+int strToInt(char *value);
+int checkMaskValid(char *mask);
 
 #endif
