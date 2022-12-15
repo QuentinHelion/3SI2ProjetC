@@ -38,6 +38,7 @@ int main(){
 	//filterMask(value,conn);
 	ipType(ipTest);
 
+	binaryIP(ipTest);
   mysql_close(conn);
 	return EXIT_SUCCESS;
 }
