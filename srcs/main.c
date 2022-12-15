@@ -29,7 +29,7 @@ int main(){
 	// insertIP(ipTest,conn);
 
 	// char *column = "1";
-	char *value = "22";
+	//char *value = "22";
 
 	//selectIP(column, value, conn);
 
@@ -37,8 +37,8 @@ int main(){
 
 	filterMask(value,conn);
 	hexaIP(ipTest);
-
-
+	//filterMask(value,conn);
+	ipType(ipTest);
   mysql_close(conn);
 	return EXIT_SUCCESS;
 }
