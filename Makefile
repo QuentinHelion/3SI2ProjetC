@@ -14,7 +14,6 @@ SRCS = 	srcs/main.c				\
   srcs/IPForms/hexa.c		\
 	srcs/ipType.c		\
 
-
 OBJS = $(SRCS:.c=.o)
 
 

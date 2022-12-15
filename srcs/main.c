@@ -35,10 +35,10 @@ int main(){
 
 	//deleteIP("3", conn);
 
-	//filterMask(value,conn);
-	ipType(ipTest);
-
-	binaryIP(ipTest);
+	filterMask(value,conn);
+	//hexaIP(ipTest);
+	//ipType(ipTest);
+	//binaryIP(ipTest);
   mysql_close(conn);
 	return EXIT_SUCCESS;
 }
