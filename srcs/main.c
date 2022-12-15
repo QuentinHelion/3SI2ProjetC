@@ -36,9 +36,9 @@ int main(){
 	//deleteIP("3", conn);
 
 	filterMask(value,conn);
-	hexaIP(ipTest);
-	//filterMask(value,conn);
-	ipType(ipTest);
+	//hexaIP(ipTest);
+	//ipType(ipTest);
+	//binaryIP(ipTest);
   mysql_close(conn);
 	return EXIT_SUCCESS;
 }
