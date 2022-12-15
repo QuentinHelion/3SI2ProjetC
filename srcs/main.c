@@ -29,13 +29,14 @@ int main(){
 	// insertIP(ipTest,conn);
 
 	// char *column = "1";
-	char *value = "22";
+	//char *value = "22";
 
 	//selectIP(column, value, conn);
 
 	//deleteIP("3", conn);
 
-	filterMask(value,conn);
+	//filterMask(value,conn);
+	ipType(ipTest);
 
 	binaryIP(ipTest);
   mysql_close(conn);
