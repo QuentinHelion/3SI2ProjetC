@@ -18,6 +18,8 @@ SRCS = 	srcs/main.c									\
 				srcs/tools/checkIpValid.c		\
 				srcs/tools/checkMaskValid.c	\
 				srcs/tools/strToInt.c				\
+				srcs/tools/ipToStruct.c			\
+				srcs/menus/convertMenu.c		\
 
 OBJS = $(SRCS:.c=.o)
 

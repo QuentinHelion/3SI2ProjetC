@@ -39,8 +39,10 @@ void binaryIP(ip_addr ip);
 void hexaIP(ip_addr ip);
 int ipType(ip_addr ip);
 int checkIpValid(char *ip);
-int insertIpMenu();
+int insertIpMenu(MYSQL *conn);
 int strToInt(char *value);
 int checkMaskValid(char *mask);
+int convertMenu();
+ip_addr ipToStruct(char *ip, char *mask);
 
 #endif

@@ -2,7 +2,7 @@
 
 int checkMaskValid(char *mask){
 
-  if(strToInt(mask) > 32){
+  if(strToInt(mask) > MAX_MASK_VALUE){
     return EXIT_FAILURE;
   }
 

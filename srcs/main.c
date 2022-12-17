@@ -21,7 +21,8 @@ int main(){
 		app = mainMenu();
 		switch (app) {
 			case 1: selectIP("1", "1", conn); break;
-			case 2: insertIpMenu(); break;
+			case 2: insertIpMenu(conn); break;
+			case 3: convertMenu(); break;
 		}
 		//app = app == 0 ? 0 : -1;
 	} while(app);
