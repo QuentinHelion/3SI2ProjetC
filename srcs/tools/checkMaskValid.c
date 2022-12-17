@@ -10,7 +10,5 @@ int checkMaskValid(char *mask){
     return EXIT_FAILURE;
   }
 
-  printf("%d\n", strToInt(mask));
-
   return EXIT_SUCCESS;
 }
