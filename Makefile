@@ -20,6 +20,7 @@ SRCS = 	srcs/main.c									\
 				srcs/tools/strToInt.c				\
 				srcs/tools/ipToStruct.c			\
 				srcs/menus/convertMenu.c		\
+				srcs/menus/maskMenu.c				\
 
 OBJS = $(SRCS:.c=.o)
 

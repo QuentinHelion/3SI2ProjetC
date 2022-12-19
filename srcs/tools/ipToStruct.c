@@ -13,7 +13,7 @@ ip_addr ipToStruct(char *ip, char *mask){
     strInt = strToInt(ptr);
     ptr = strtok(NULL, delim);
     bitArray[i] = strInt;
-    printf("%d\n", strInt);
+    // printf("%d\n", strInt);
     i++;
   }
 

@@ -11,16 +11,17 @@ int convertMenu(){
     printf("Please enter IP: ");
     fgets(ip, 16, stdin);
     fgetc(stdin);
-    printf("%s\n", ip);
     for (short i = 0; i < 16; i++) {
       buffer[i] = ip[i];
     }
   } while(checkIpValid(ip));
 
-  printf("%s\n", buffer);
-
+  printf("\nBinary: ");
   binaryIP(ipToStruct(buffer, "24"));
+  printf("\nHexa: ");
   hexaIP(ipToStruct(buffer, "24"));
+  printf("\nIP Type: ");
+  ipType(ipToStruct(buffer, "24"));
 
   return EXIT_SUCCESS;
 }

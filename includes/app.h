@@ -44,5 +44,6 @@ int strToInt(char *value);
 int checkMaskValid(char *mask);
 int convertMenu();
 ip_addr ipToStruct(char *ip, char *mask);
+int maskMenu(MYSQL *conn);
 
 #endif
