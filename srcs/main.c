@@ -23,6 +23,7 @@ int main(){
 			case 2: insertIpMenu(conn); break; // db IP insertion
 			case 3: convertMenu(); break; // IP convertion (bin, hex, type)
 			case 4: maskMenu(conn); break; // show save IPS with specific mask
+			case 5: deleteIpMenu(conn); break; // delete IP 
 		}
 	} while(app); // when choice == 2 app stop
 
