@@ -6,21 +6,21 @@ LDFLAGS =
 INCLUDES = includes
 
 SRCS = 	srcs/main.c									\
+				srcs/filter.c								\
+				srcs/ipType.c								\
 				srcs/mysql/insert.c					\
 				srcs/mysql/select.c					\
 				srcs/mysql/delete.c					\
-				srcs/filter.c								\
 				srcs/IPForms/binary.c				\
 			  srcs/IPForms/hexa.c					\
-				srcs/ipType.c								\
 				srcs/menus/mainMenu.c				\
 				srcs/menus/insertIpMenu.c		\
+				srcs/menus/convertMenu.c		\
+				srcs/menus/maskMenu.c				\
 				srcs/tools/checkIpValid.c		\
 				srcs/tools/checkMaskValid.c	\
 				srcs/tools/strToInt.c				\
 				srcs/tools/ipToStruct.c			\
-				srcs/menus/convertMenu.c		\
-				srcs/menus/maskMenu.c				\
 
 OBJS = $(SRCS:.c=.o)
 
