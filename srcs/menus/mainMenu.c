@@ -4,13 +4,13 @@ int mainMenu(){
   short choice = 0;
 
   do {
-    printf("\n========oOo========\n");
+    printf("%s",THEME_BAR_TOP);
     printf("1: Show all saved IP\n");
     printf("2: Add IP\n");
     printf("3: Convert IP\n");
     printf("4: Filter save ip with mask\n");
-    printf("0: Quitter\n");
-    printf("Que voulez-vous faire ?\n");
+    printf("0: Exit\n");
+    printf("What do you want to do ?\n");
 
     scanf("%hd",&choice);
     fgetc(stdin);
