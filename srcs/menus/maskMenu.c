@@ -3,7 +3,7 @@
 int maskMenu(MYSQL *conn){
   char mask[3];
 
-  printf("\n========oOo========\n");
+  printf("%s",THEME_BAR_TOP);
   do {
     printf("Please enter mask: ");
     fgets(mask, 3, stdin);
