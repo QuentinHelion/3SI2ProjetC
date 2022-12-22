@@ -30,12 +30,12 @@ all: $(NAME)
 
 
 $(NAME): $(OBJS)
-	$(CC) -o $@ $^ $(LDFLAGS) -lmysqlclient
+	$(CC) -o $@ $^ $(LDFLAGS) -lmysqlclient -lncurses
 
 $(OBJS): $(INCLUDES)/app.h
 
 %.o: %.c
-	$(CC) -o $@ -c $< -I $(INCLUDES) $(CFLAGS) -lmysqlclient
+	$(CC) -o $@ -c $< -I $(INCLUDES) $(CFLAGS) -lmysqlclient -lncurses
 
 clean:
 	rm -f $(OBJS)

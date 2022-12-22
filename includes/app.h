@@ -8,6 +8,7 @@
 # include <stdio.h>
 # include <mysql/mysql.h>
 # include <string.h>
+# include <ncurses.h>
 
 
 // === Constants ===
