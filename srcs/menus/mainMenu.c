@@ -2,6 +2,7 @@
 
 int mainMenu(){
   short choice = 0;
+  // char *str;
 
   do {
     // printf("%s",THEME_BAR_TOP);
@@ -14,7 +15,6 @@ int mainMenu(){
     // printf("What do you want to do ?\n");
 
     initscr();              // Initialise la structure WINDOW et autres paramètres
-    // printw("Hello World");  // Écrit Hello World à l'endroit où le curseur logique est positionné
     printw("%s",THEME_BAR_TOP);
     printw("1: Show all saved IP\n");
     printw("2: Add IP\n");
@@ -22,14 +22,16 @@ int mainMenu(){
     printw("4: Filter saved IP with mask\n");
     printw("5: Delete saved IP\n");
     printw("0: Exit\n");
-    printw("What do you want to do ?\n");
+    // endwin();
+    // printw("What do you want to do ?\n");
     refresh();              // Rafraîchit la fenêtre courante afin de voir le message apparaître
-    getch();                // On attend que l'utilisateur appui sur une touche pour quitter
-    endwin();               // Restaure les paramètres par défaut du terminal
+    // getchstr(str);                // On attend que l'utilisateur appui sur une touche pour quitter
 
-    scanf("%hd",&choice);
-    fgetc(stdin);
+    scanw("%hd",&choice);
+    // fgetc(stdin);
+    // choice = strToInt(str);
   } while(choice > 5|| choice < 0);
 
+  // endwin();               // Restaure les paramètres par défaut du terminal
   return choice;
 }
