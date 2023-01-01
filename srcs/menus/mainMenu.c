@@ -32,6 +32,7 @@ int mainMenu(){
     // choice = strToInt(str);
   } while(choice > 5|| choice < 0);
 
+  clear();
   // endwin();               // Restaure les paramètres par défaut du terminal
   return choice;
 }
