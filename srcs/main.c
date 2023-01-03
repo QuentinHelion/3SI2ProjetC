@@ -25,7 +25,7 @@ int main(){
 			case 4: maskMenu(conn); break; // show save IPS with specific mask
 			case 5: deleteIpMenu(conn); break; // delete IP
 		}
-	} while(app); // when choice == 2 app stop
+	} while(app != 6); // when choice == 2 app stop
 
   mysql_close(conn); // Close mysql connection
 	endwin();
