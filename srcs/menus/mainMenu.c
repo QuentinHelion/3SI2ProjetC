@@ -42,8 +42,8 @@ int mainMenu(){
   char item[35];
   int ch, i = 0;
 
-  initscr(); // initialize Ncurses
-  w = newwin( 15, 50, 1, 1 ); // create a new window
+  // initscr(); // initialize Ncurses
+  w = newwin( 10, 40, 1, 1 ); // create a new window
   box( w, 0, 0 ); // sets default borders for the window
   // now print all the menu items and highlight the first one
 
@@ -90,7 +90,7 @@ int mainMenu(){
   }
 
   delwin( w );
-  endwin();
+  // endwin();
   // printf("%s\n", list[i]);
 
 

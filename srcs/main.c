@@ -15,6 +15,8 @@ int main(){
 		// printf("Connection success\n");
 	}
 
+	initscr(); // initialize Ncurses
+
  // ======= APP PART =======
 	do {
 		app = mainMenu(); // call main menu & stock user choice
@@ -25,6 +27,7 @@ int main(){
 			case 4: maskMenu(conn); break; // show save IPS with specific mask
 			case 5: deleteIpMenu(conn); break; // delete IP
 		}
+		refresh();
 	} while(app != 6); // when choice == 2 app stop
 
   mysql_close(conn); // Close mysql connection
