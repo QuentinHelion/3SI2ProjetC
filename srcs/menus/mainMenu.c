@@ -90,7 +90,7 @@ int mainMenu(){
   }
 
   delwin( w );
-  // endwin();
+  endwin();
   // printf("%s\n", list[i]);
 
 

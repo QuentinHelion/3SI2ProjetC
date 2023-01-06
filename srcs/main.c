@@ -16,10 +16,11 @@ int main(){
 	}
 
 	initscr(); // initialize Ncurses
-
+	
  // ======= APP PART =======
 	do {
 		app = mainMenu(); // call main menu & stock user choice
+		refresh();
 		switch (app) {
 			case 1: selectMenu(conn); break; // show all saved IPS
 			case 2: insertIpMenu(conn); break; // db IP insertion
