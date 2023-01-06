@@ -38,7 +38,7 @@ int insertIpMenu(MYSQL *conn){
 
   insertIP(ipToStruct(buffer, mask), conn);
 
-  fgetc(stdin); // clean input
+  // fgetc(stdin); // clean input
 
   nodelay(stdscr, TRUE);
   noecho();
