@@ -2,7 +2,6 @@
 
 int maskMenu(MYSQL *conn){
   char mask[3];
-  char input;
 
   WINDOW *w;
   w = newwin( 50, 40, 1, 1 ); // create a new window
@@ -24,8 +23,7 @@ int maskMenu(MYSQL *conn){
   filterMask(mask,conn);
 
 
-  printw("Press key to exit\n");
-  scanw("%c",&input);
+  exitMenu();
 
   nodelay(stdscr, TRUE);
   noecho();

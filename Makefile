@@ -23,6 +23,7 @@ SRCS = 	srcs/main.c									\
 				srcs/tools/checkMaskValid.c	\
 				srcs/tools/strToInt.c				\
 				srcs/tools/ipToStruct.c			\
+				srcs/menus/includes/exit.c	\
 
 OBJS = $(SRCS:.c=.o)
 

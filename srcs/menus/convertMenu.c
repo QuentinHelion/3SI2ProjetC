@@ -3,7 +3,6 @@
 int convertMenu(){
   char ip[16];
   char buffer[16];
-  char input;
 
   // printf("%s",THEME_BAR_TOP);
   WINDOW *w;
@@ -36,8 +35,7 @@ int convertMenu(){
   printw("\nIP Type: ");
   ipType(ipToStruct(buffer, "24"));
 
-  printw("\nPress key to exit\n");
-  scanw("%c",&input);
+  exitMenu();
 
   nodelay(stdscr, TRUE);
   noecho();

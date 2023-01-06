@@ -2,7 +2,6 @@
 
 int deleteIpMenu(MYSQL *conn){
   char id[4];
-  char input;
 
   WINDOW *w;
   w = newwin( 50, 40, 1, 1 ); // create a new window
@@ -26,8 +25,7 @@ int deleteIpMenu(MYSQL *conn){
 
   // fgetc(stdin); // clean input
 
-  printw("\nPress key to exit\n");
-  scanw("%c",&input);
+  exitMenu();
 
   nodelay(stdscr, TRUE);
   noecho();

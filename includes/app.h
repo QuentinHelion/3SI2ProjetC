@@ -40,6 +40,7 @@ int insertIpMenu(MYSQL *conn);
 int maskMenu(MYSQL *conn);
 int deleteIpMenu(MYSQL *conn);
 int selectMenu(MYSQL *conn);
+int exitMenu();
 
 // == SQL ==
 int insertIP(ip_addr ip, MYSQL *conn);
