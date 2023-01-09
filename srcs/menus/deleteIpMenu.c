@@ -13,13 +13,12 @@ int deleteIpMenu(MYSQL *conn){
   printw("Please enter id (0 to exit): ");
   scanw("%s",id);
 
-  if(strToInt(id) == 0){
-    return EXIT_SUCCESS;
+  if(strToInt(id) != 0){
+
+    deleteIP(id, conn);
+    exitMenu();
+
   }
-
-  deleteIP(id, conn);
-
-  exitMenu();
 
   nodelay(stdscr, TRUE);
   noecho();
