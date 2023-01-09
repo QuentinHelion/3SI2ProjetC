@@ -16,7 +16,10 @@ int main(){
 	}
 
 	initscr(); // initialize Ncurses
-	
+	start_color();
+  init_pair(1, COLOR_WHITE, COLOR_BLACK);
+  attron(COLOR_PAIR(1));
+
  // ======= APP PART =======
 	do {
 		app = mainMenu(); // call main menu & stock user choice

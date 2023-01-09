@@ -8,11 +8,8 @@ int mainMenu(){
   char item[35];
   int ch, i = 0;
 
-  // initscr(); // initialize Ncurses
   w = newwin( 10, 40, 1, 1 ); // create a new window
   box( w, 0, 0 ); // sets default borders for the window
-  // now print all the menu items and highlight the first one
-
   for( i=0; i<6; i++ ) {
     if( i == 0 ) {
       wattron( w, A_STANDOUT ); // highlights the first item.

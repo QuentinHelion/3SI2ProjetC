@@ -24,6 +24,7 @@ SRCS = 	srcs/main.c									\
 				srcs/tools/strToInt.c				\
 				srcs/tools/ipToStruct.c			\
 				srcs/menus/includes/exit.c	\
+				srcs/menus/includes/logo.c	\
 
 OBJS = $(SRCS:.c=.o)
 
