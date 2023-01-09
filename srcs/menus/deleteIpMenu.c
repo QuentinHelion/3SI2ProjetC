@@ -10,10 +10,6 @@ int deleteIpMenu(MYSQL *conn){
 
   selectIP("1", "1", conn); // show all IP (WHERE 1 = 1)
 
-  // printf("%s",THEME_BAR_TOP);
-  // printf("Please enter id (0 to exit): ");
-  // fgets(id, 4, stdin);
-  // fgetc(stdin);
   printw("Please enter id (0 to exit): ");
   scanw("%s",id);
 
@@ -22,8 +18,6 @@ int deleteIpMenu(MYSQL *conn){
   }
 
   deleteIP(id, conn);
-
-  // fgetc(stdin); // clean input
 
   exitMenu();
 
