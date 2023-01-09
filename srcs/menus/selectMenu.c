@@ -1,8 +1,8 @@
 #include "app.h"
 
 int selectMenu(MYSQL *conn){
-  // WINDOW *w;
-  // w = newwin( 50, 40, 1, 1 ); // create a new window
+  WINDOW *w;
+  w = newwin( 50, 40, 1, 1 ); // create a new window
   // box( w, 0, 0 ); // sets default borders for the window
 
   // printw("%s",THEME_BAR_TOP);
@@ -11,6 +11,7 @@ int selectMenu(MYSQL *conn){
   exitMenu();
 
   clear();
-  // delwin( w );
+  delwin( w );
+  
   return EXIT_SUCCESS;
 }

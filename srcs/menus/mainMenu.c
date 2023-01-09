@@ -89,8 +89,8 @@ int mainMenu(){
 
   }
 
+  clear();
   delwin( w );
-  endwin();
   // printf("%s\n", list[i]);
 
 
