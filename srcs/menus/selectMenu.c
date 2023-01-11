@@ -3,7 +3,8 @@
 int selectMenu(MYSQL *conn){
   WINDOW *w;
   w = newwin( 10, 40, 1, 1 ); // create a new window
-  box( w, 0, 0 ); // sets default borders for the window
+  // refresh();
+  // box( w, 0, 0 ); // sets default borders for the window
 
   logo();
 

@@ -30,8 +30,6 @@ int convertMenu(){
 
   exitMenu();
 
-  nodelay(stdscr, TRUE);
-  noecho();
   clear();
   delwin(w);
 

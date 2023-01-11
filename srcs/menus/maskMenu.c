@@ -25,10 +25,7 @@ int maskMenu(MYSQL *conn){
 
   exitMenu();
 
-  nodelay(stdscr, TRUE);
-  noecho();
   clear();
   delwin(w);
-  // fgetc(stdin);
   return EXIT_SUCCESS;
 }

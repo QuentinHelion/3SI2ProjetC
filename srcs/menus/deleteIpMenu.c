@@ -20,8 +20,6 @@ int deleteIpMenu(MYSQL *conn){
 
   }
 
-  nodelay(stdscr, TRUE);
-  noecho();
   clear();
   delwin(w);
   return EXIT_SUCCESS;
