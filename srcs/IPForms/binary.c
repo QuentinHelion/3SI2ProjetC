@@ -1,7 +1,7 @@
 #include "app.h"
 
 void binaryIP(ip_addr ip) {
-  
+
   int count=0;  // "count" helps to put "." when printing the IP address in the correct place
   int tmp=0;    // Keeps parts of the IP address we want to convert to binary form
   int binaddr[4][8]={0};  // Stores the final result; the binary form of the IP address
@@ -20,14 +20,16 @@ void binaryIP(ip_addr ip) {
     for(int z=0; z<8; z++){
       count++;
       if(count == 9){
-        printf(".");
+        // printf(".");
+        printw(".");
         count=1;
       }
 
-      printf("%d", binaddr[j][z]);
+      // printf("%d", binaddr[j][z]);
+      printw("%d", binaddr[j][z]);
     }
   }
 
   // === For aesthetic purposes ===
-  printf("\n");
+  // printf("\n");
 }

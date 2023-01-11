@@ -20,14 +20,16 @@ void hexaIP(ip_addr ip) {
     for(int z=0; z<2; z++){
       count++;
       if(count == 3){
-        printf(".");
+        // printf(".");
+        printw(".");
         count=1;
       }
 
-      printf("%x", hexaddr[j][z]);
+      // printf("%x", hexaddr[j][z]);
+      printw("%x", hexaddr[j][z]);
     }
   }
 
   // === For aesthetic purposes ===
-  printf("\n");
+  // printf("\n");
 }

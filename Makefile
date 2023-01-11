@@ -18,10 +18,13 @@ SRCS = 	srcs/main.c									\
 				srcs/menus/convertMenu.c		\
 				srcs/menus/maskMenu.c				\
 				srcs/menus/deleteIpMenu.c		\
+				srcs/menus/selectMenu.c			\
 				srcs/tools/checkIpValid.c		\
 				srcs/tools/checkMaskValid.c	\
 				srcs/tools/strToInt.c				\
 				srcs/tools/ipToStruct.c			\
+				srcs/menus/includes/exit.c	\
+				srcs/menus/includes/logo.c	\
 
 OBJS = $(SRCS:.c=.o)
 
@@ -30,12 +33,12 @@ all: $(NAME)
 
 
 $(NAME): $(OBJS)
-	$(CC) -o $@ $^ $(LDFLAGS) -lmysqlclient
+	$(CC) -o $@ $^ $(LDFLAGS) -lmysqlclient -lncurses
 
 $(OBJS): $(INCLUDES)/app.h
 
 %.o: %.c
-	$(CC) -o $@ -c $< -I $(INCLUDES) $(CFLAGS) -lmysqlclient
+	$(CC) -o $@ -c $< -I $(INCLUDES) $(CFLAGS) -lmysqlclient -lncurses
 
 clean:
 	rm -f $(OBJS)
