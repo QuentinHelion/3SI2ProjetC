@@ -2,11 +2,11 @@
 
 int mainMenu(){
   WINDOW *w;
-  char list[5][35] = { "Catalog", "Add IP", "Convert IP", "Delete saved IP", "Exit"};
+  char list[5][35] = { "IP Catalog", "Add IP", "Convert IP", "Delete saved IP", "Exit"};
   char item[35];
   int ch, i = 0;
 
-  w = newwin( 10, 40, 1, 1 ); // create a new window
+  w = newwin( 7, 40, 1, 1 ); // create a new window
   box( w, 0, 0 ); // sets default borders for the window
   for( i=0; i<5; i++ ) {
     if( i == 0 ) {
