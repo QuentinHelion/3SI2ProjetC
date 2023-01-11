@@ -40,6 +40,7 @@ int insertIpMenu(MYSQL *conn);
 int maskMenu(MYSQL *conn);
 int deleteIpMenu(MYSQL *conn);
 int selectMenu(MYSQL *conn);
+int catalogMenu();
 int exitMenu();
 int logo();
 
