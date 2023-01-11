@@ -29,7 +29,6 @@ int main(){
 			case 1: choice = catalogMenu(); choice == 1 ? selectMenu(conn) : choice == 2 ? maskMenu(conn) : 0; break; // IP catalog
 			case 2: insertIpMenu(conn); break; // db IP insertion
 			case 3: convertMenu(); break; // IP convertion (bin, hex, type)
-			// case 4: maskMenu(conn); break; // show save IPS with specific mask
 			case 4: deleteIpMenu(conn); break; // delete IP
 		}
 		refresh(); //refresh window

@@ -35,7 +35,7 @@ int catalogMenu(){
         break;
       case KEY_DOWN:
         i++;
-        i = ( i>5 ) ? 0 : i;
+        i = ( i>2 ) ? 0 : i;
         break;
     }
 

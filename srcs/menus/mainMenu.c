@@ -35,7 +35,7 @@ int mainMenu(){
         break;
       case KEY_DOWN:
         i++;
-        i = ( i>5 ) ? 0 : i;
+        i = ( i>4 ) ? 0 : i;
         break;
     }
 
