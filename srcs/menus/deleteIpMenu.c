@@ -2,20 +2,26 @@
 
 int deleteIpMenu(MYSQL *conn){
   char id[4];
+  WINDOW *w;
 
-  selectIP("1", "1", conn); // show all IP
+  w = newwin( 50, 40, 1, 1 ); // create a new window
+  nodelay(stdscr, FALSE); // needed to show user input on window
+  echo();
 
-  printf("%s",THEME_BAR_TOP);
-  printf("Please enter id (0 to exit): ");
-  fgets(id, 4, stdin);
-  fgetc(stdin);
+  logo(); // print app logo
 
-  if(strToInt(id) == 0){
-    return EXIT_SUCCESS;
+  selectIP("1", "1", conn); // show all IP (WHERE 1 = 1)
+
+  printw("Please enter id (0 to exit): ");
+  scanw("%s",id);
+
+  if(strToInt(id) != 0){
+    deleteIP(id, conn); // delete ip
+    exitMenu(); // prompt user for exit this menu
   }
 
-  deleteIP(id, conn);
+  clear(); // clear window
+  delwin( w ); // delete window
 
-  fgetc(stdin); // clean input
   return EXIT_SUCCESS;
 }

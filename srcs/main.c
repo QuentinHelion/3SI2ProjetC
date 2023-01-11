@@ -4,6 +4,7 @@ int main(){
 
 	// ======= VARIABLES ==========
 	int app;
+	int choice;
 	MYSQL *conn;
 
 	// ======= SQL CONNECTION =======
@@ -15,18 +16,26 @@ int main(){
 		// printf("Connection success\n");
 	}
 
+	initscr(); // initialize Ncurses
+	start_color(); // enable color on app
+  init_pair(1, COLOR_WHITE, COLOR_BLACK); // create color (text + background)
+  attron(COLOR_PAIR(1)); // set color
+
  // ======= APP PART =======
 	do {
 		app = mainMenu(); // call main menu & stock user choice
+		refresh(); // refresh window
 		switch (app) {
-			case 1: selectIP("1", "1", conn); break; // show all saved IPS
+			case 1: choice = catalogMenu(); choice == 1 ? selectMenu(conn) : choice == 2 ? maskMenu(conn) : 0; break; // IP catalog
 			case 2: insertIpMenu(conn); break; // db IP insertion
 			case 3: convertMenu(); break; // IP convertion (bin, hex, type)
-			case 4: maskMenu(conn); break; // show save IPS with specific mask
-			case 5: deleteIpMenu(conn); break; // delete IP 
+			case 4: deleteIpMenu(conn); break; // delete IP
 		}
-	} while(app); // when choice == 2 app stop
+		refresh(); //refresh window
+	} while(app != 5); // when choice == 2 app stop
 
   mysql_close(conn); // Close mysql connection
+	endwin(); // close window
+
 	return EXIT_SUCCESS;
 }
