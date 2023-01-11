@@ -19,6 +19,7 @@ SRCS = 	srcs/main.c									\
 				srcs/menus/maskMenu.c				\
 				srcs/menus/deleteIpMenu.c		\
 				srcs/menus/selectMenu.c			\
+				srcs/menus/catalogMenu.c		\
 				srcs/tools/checkIpValid.c		\
 				srcs/tools/checkMaskValid.c	\
 				srcs/tools/strToInt.c				\

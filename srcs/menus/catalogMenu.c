@@ -1,14 +1,14 @@
 #include "app.h"
 
-int mainMenu(){
+int catalogMenu(){
   WINDOW *w;
-  char list[5][35] = { "IP Catalog", "Add IP", "Convert IP", "Delete saved IP", "Exit"};
+  char list[3][35] = { "Show all IP", "Filter saved IP with mask", "Return"};
   char item[35];
   int ch, i = 0;
 
-  w = newwin( 7, 40, 1, 1 ); // create a new window
+  w = newwin( 5, 40, 1, 1 ); // create a new window
   box( w, 0, 0 ); // sets default borders for the window
-  for( i=0; i<5; i++ ) {
+  for( i=0; i<3; i++ ) {
     if( i == 0 ) {
       wattron( w, A_STANDOUT ); // highlights the first item.
     } else {
@@ -31,7 +31,7 @@ int mainMenu(){
     switch( ch ) {
       case KEY_UP:
         i--;
-        i = ( i<0 ) ? 4 : i;
+        i = ( i<0 ) ? 2 : i;
         break;
       case KEY_DOWN:
         i++;
