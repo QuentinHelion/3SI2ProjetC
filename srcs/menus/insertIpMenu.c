@@ -4,23 +4,16 @@ int insertIpMenu(MYSQL *conn){
   char ip[16];
   char mask[3];
   char buffer[16];
-
   WINDOW *w;
+
   w = newwin( 50, 40, 1, 1 ); // create a new window
-  // box( w, 0, 0 ); // sets default borders for the window
-
-
-  // endwin();
-  nodelay(stdscr, FALSE);
+  nodelay(stdscr, FALSE); // needed to show user input on window
   echo();
-  // printf("%s",THEME_BAR_TOP);
+
+  logo(); // print app logo
 
   do {
-    // printf("Please enter IP: ");
-    // fgets(ip, 16, stdin);
-    // fgetc(stdin);
     printw("Please enter IP: ");
-    // refresh();
     scanw("%s",ip);
     for (short i = 0; i < 16; i++) {
       buffer[i] = ip[i];
@@ -28,17 +21,14 @@ int insertIpMenu(MYSQL *conn){
   } while(checkIpValid(ip)); // if entry is good we can leave the loop
 
   do {
-    // printf("Please enter mask: ");
-    // fgets(mask, 3, stdin);
-    // fgetc(stdin);
     printw("Please enter mask: ");
-    // refresh();
     scanw("%s",mask);
   } while(checkMaskValid(mask)); // if entry is good we can leave the loop
 
   insertIP(ipToStruct(buffer, mask), conn);
 
-  clear();
-  delwin(w);
+  clear(); // clear window
+  delwin( w ); // delete window
+
   return EXIT_SUCCESS;
 }

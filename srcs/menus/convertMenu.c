@@ -3,11 +3,13 @@
 int convertMenu(){
   char ip[16];
   char buffer[16];
-
   WINDOW *w;
+
   w = newwin( 50, 40, 1, 1 ); // create a new window
-  nodelay(stdscr, FALSE);
+  nodelay(stdscr, FALSE); // needed to show user input on window
   echo();
+
+  logo(); // print app logo
 
   do {
     printw("Please enter IP: ");
@@ -28,10 +30,10 @@ int convertMenu(){
   printw("\nIP Type: ");
   ipType(ipToStruct(buffer, "24"));
 
-  exitMenu();
+  exitMenu(); // prompt user for exit this menu
 
-  clear();
-  delwin(w);
+  clear(); // clear window
+  delwin( w ); // delete window
 
   return EXIT_SUCCESS;
 }

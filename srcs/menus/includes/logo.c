@@ -1,11 +1,9 @@
 #include "app.h"
 
 int logo(){
-  start_color();
-  init_pair(1, COLOR_WHITE, COLOR_BLACK);
-  init_pair(2, COLOR_YELLOW, COLOR_BLACK);
+  init_pair(2, COLOR_YELLOW, COLOR_BLACK); // create color (text + background)
 
-  attron(COLOR_PAIR(2));
+  attron(COLOR_PAIR(2)); // set color
   printw( "\
     _____          _____                      \n\
    |_   _|        / ____|                     \n\

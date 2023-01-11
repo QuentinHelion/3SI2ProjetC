@@ -3,17 +3,15 @@
 int selectMenu(MYSQL *conn){
   WINDOW *w;
   w = newwin( 10, 40, 1, 1 ); // create a new window
-  // refresh();
-  // box( w, 0, 0 ); // sets default borders for the window
 
-  logo();
+  logo(); // print app logo
 
   selectIP("1", "1", conn);
 
-  exitMenu();
+  exitMenu(); // prompt user for exit this menu
 
-  clear();
-  delwin( w );
+  clear(); // clear window
+  delwin( w ); // delete window
 
   return EXIT_SUCCESS;
 }
