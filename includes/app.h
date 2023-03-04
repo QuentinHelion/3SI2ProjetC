@@ -16,12 +16,11 @@
 # define SERVER   			"localhost"
 # define USER     			"root"
 # define PASSWORD 			"root"
-# define DB       			"2SI2ProjetC"
+# define DB       			"3SI2ProjetC"
 
 // == Other ==
 # define MAX_MASK_VALUE 32
 # define MIN_MASK_VALUE 1
-# define THEME_BAR_TOP 	"\n========oOo========\n"
 
 
 // === Structures ===
